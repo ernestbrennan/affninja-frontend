@@ -1,0 +1,2251 @@
+.country {
+  height: 20px;
+  width: 24px;
+  background: url(/images/country_sprite.png);
+  display: inline-block;
+  vertical-align: sub;
+}
+
+.country_AD {
+  @extend .country;
+  background-position: -24px -0;
+}
+
+.country_AE {
+  @extend .country;
+  background-position: -24px -240px;
+}
+
+.country_AF {
+  @extend .country;
+  background-position: -0 -24px;
+}
+
+.country_AG {
+  @extend .country;
+  background-position: -24px -24px;
+}
+
+.country_AI {
+  @extend .country;
+  background-position: -48px -0;
+}
+
+.country_AL {
+  @extend .country;
+  background-position: -48px -24px;
+}
+
+.country_AM {
+  @extend .country;
+  background-position: -0 -48px;
+}
+
+.country_AN {
+  @extend .country;
+  background-position: -24px -48px;
+}
+
+.country_AO {
+  @extend .country;
+  background-position: -48px -48px;
+}
+
+.country_AQ {
+  @extend .country;
+  background-position: -72px -0;
+}
+
+.country_AR {
+  @extend .country;
+  background-position: -72px -24px;
+}
+
+.country_AS {
+  @extend .country;
+  background-position: -72px -48px;
+}
+
+.country_AT {
+  @extend .country;
+  background-position: -0 -72px;
+}
+
+.country_AU {
+  @extend .country;
+  background-position: -24px -72px;
+}
+
+.country_AW {
+  @extend .country;
+  background-position: -48px -72px;
+}
+
+.country_AZ {
+  @extend .country;
+  background-position: -72px -72px;
+}
+
+.country_BA {
+  @extend .country;
+  background-position: -96px -0;
+}
+
+.country_BB {
+  @extend .country;
+  background-position: -96px -24px;
+}
+
+.country_BD {
+  @extend .country;
+  background-position: -96px -48px;
+}
+
+.country_BE {
+  @extend .country;
+  background-position: -96px -72px;
+}
+
+.country_BF {
+  @extend .country;
+  background-position: -0 -96px;
+}
+
+.country_BG {
+  @extend .country;
+  background-position: -24px -96px;
+}
+
+.country_BH {
+  @extend .country;
+  background-position: -48px -96px;
+}
+
+.country_BI {
+  @extend .country;
+  background-position: -72px -96px;
+}
+
+.country_BJ {
+  @extend .country;
+  background-position: -96px -96px;
+}
+
+.country_BM {
+  @extend .country;
+  background-position: -120px -0;
+}
+
+.country_BN {
+  @extend .country;
+  background-position: -120px -24px;
+}
+
+.country_BO {
+  @extend .country;
+  background-position: -120px -48px;
+}
+
+.country_BR {
+  @extend .country;
+  background-position: -120px -72px;
+}
+
+.country_BS {
+  @extend .country;
+  background-position: -120px -96px;
+}
+
+.country_BT {
+  @extend .country;
+  background-position: -0 -120px;
+}
+
+.country_BW {
+  @extend .country;
+  background-position: -24px -120px;
+}
+
+.country_BY {
+  @extend .country;
+  background-position: -48px -120px;
+}
+
+.country_BZ {
+  @extend .country;
+  background-position: -72px -120px;
+}
+
+.country_CA {
+  @extend .country;
+  background-position: -96px -120px;
+}
+
+.country_CD {
+  @extend .country;
+  background-position: -120px -120px;
+}
+
+.country_CF {
+  @extend .country;
+  background-position: -144px -0;
+}
+
+.country_CG {
+  @extend .country;
+  background-position: -144px -24px;
+}
+
+.country_CH {
+  @extend .country;
+  background-position: -144px -48px;
+}
+
+.country_CI {
+  @extend .country;
+  background-position: -144px -72px;
+}
+
+.country_CK {
+  @extend .country;
+  background-position: -144px -96px;
+}
+
+.country_CL {
+  @extend .country;
+  background-position: -144px -120px;
+}
+
+.country_CM {
+  @extend .country;
+  background-position: -0 -144px;
+}
+
+.country_CN {
+  @extend .country;
+  background-position: -24px -144px;
+}
+
+.country_CO {
+  @extend .country;
+  background-position: -48px -144px;
+}
+
+.country_CR {
+  @extend .country;
+  background-position: -72px -144px;
+}
+
+.country_CU {
+  @extend .country;
+  background-position: -96px -144px;
+}
+
+.country_CV {
+  @extend .country;
+  background-position: -120px -144px;
+}
+
+.country_CY {
+  @extend .country;
+  background-position: -144px -144px;
+}
+
+.country_CZ {
+  @extend .country;
+  background-position: -168px -0;
+}
+
+.country_DE {
+  @extend .country;
+  background-position: -168px -24px;
+}
+
+.country_DJ {
+  @extend .country;
+  background-position: -168px -48px;
+}
+
+.country_DK {
+  @extend .country;
+  background-position: -168px -72px;
+}
+
+.country_DM {
+  @extend .country;
+  background-position: -168px -96px;
+}
+
+.country_DO {
+  @extend .country;
+  background-position: -168px -120px;
+}
+
+.country_DZ {
+  @extend .country;
+  background-position: -168px -144px;
+}
+
+.country_EC {
+  @extend .country;
+  background-position: -0 -168px;
+}
+
+.country_EE {
+  @extend .country;
+  background-position: -24px -168px;
+}
+
+.country_EG {
+  @extend .country;
+  background-position: -48px -168px;
+}
+
+.country_EH {
+  @extend .country;
+  background-position: -72px -168px;
+}
+
+.country_ER {
+  @extend .country;
+  background-position: -96px -168px;
+}
+
+.country_ES {
+  @extend .country;
+  background-position: -120px -168px;
+}
+
+.country_ET {
+  @extend .country;
+  background-position: -144px -168px;
+}
+
+.country_FI {
+  @extend .country;
+  background-position: -168px -168px;
+}
+
+.country_FJ {
+  @extend .country;
+  background-position: -192px -0;
+}
+
+.country_FM {
+  @extend .country;
+  background-position: -192px -24px;
+}
+
+.country_FO {
+  @extend .country;
+  background-position: -192px -48px;
+}
+
+.country_FR {
+  @extend .country;
+  background-position: -192px -72px;
+}
+
+.country_GA {
+  @extend .country;
+  background-position: -192px -96px;
+}
+
+.country_GB {
+  @extend .country;
+  background-position: -192px -120px;
+}
+
+.country_GD {
+  @extend .country;
+  background-position: -192px -144px;
+}
+
+.country_GE {
+  @extend .country;
+  background-position: -192px -168px;
+}
+
+.country_GG {
+  @extend .country;
+  background-position: -0 -192px;
+}
+
+.country_GH {
+  @extend .country;
+  background-position: -24px -192px;
+}
+
+.country_GI {
+  @extend .country;
+  background-position: -48px -192px;
+}
+
+.country_GL {
+  @extend .country;
+  background-position: -72px -192px;
+}
+
+.country_GM {
+  @extend .country;
+  background-position: -96px -192px;
+}
+
+.country_GN {
+  @extend .country;
+  background-position: -120px -192px;
+}
+
+.country_GP {
+  @extend .country;
+  background-position: -144px -192px;
+}
+
+.country_GQ {
+  @extend .country;
+  background-position: -168px -192px;
+}
+
+.country_GR {
+  @extend .country;
+  background-position: -192px -192px;
+}
+
+.country_GT {
+  @extend .country;
+  background-position: -216px -0;
+}
+
+.country_GU {
+  @extend .country;
+  background-position: -216px -24px;
+}
+
+.country_GW {
+  @extend .country;
+  background-position: -216px -48px;
+}
+
+.country_GY {
+  @extend .country;
+  background-position: -216px -72px;
+}
+
+.country_HK {
+  @extend .country;
+  background-position: -216px -96px;
+}
+
+.country_HN {
+  @extend .country;
+  background-position: -216px -120px;
+}
+
+.country_HR {
+  @extend .country;
+  background-position: -216px -144px;
+}
+
+.country_HT {
+  @extend .country;
+  background-position: -216px -168px;
+}
+
+.country_HU {
+  @extend .country;
+  background-position: -216px -192px;
+}
+
+.country_ID {
+  @extend .country;
+  background-position: -0 -216px;
+}
+
+.country_IE {
+  @extend .country;
+  background-position: -24px -216px;
+}
+
+.country_IL {
+  @extend .country;
+  background-position: -48px -216px;
+}
+
+.country_IM {
+  @extend .country;
+  background-position: -72px -216px;
+}
+
+.country_IN {
+  @extend .country;
+  background-position: -96px -216px;
+}
+
+.country_IQ {
+  @extend .country;
+  background-position: -120px -216px;
+}
+
+.country_IR {
+  @extend .country;
+  background-position: -144px -216px;
+}
+
+.country_IS {
+  @extend .country;
+  background-position: -168px -216px;
+}
+
+.country_IT {
+  @extend .country;
+  background-position: -192px -216px;
+}
+
+.country_JE {
+  @extend .country;
+  background-position: -216px -216px;
+}
+
+.country_JM {
+  @extend .country;
+  background-position: -240px -0;
+}
+
+.country_JO {
+  @extend .country;
+  background-position: -240px -24px;
+}
+
+.country_JP {
+  @extend .country;
+  background-position: -240px -48px;
+}
+
+.country_KE {
+  @extend .country;
+  background-position: -240px -72px;
+}
+
+.country_KG {
+  @extend .country;
+  background-position: -240px -96px;
+}
+
+.country_KH {
+  @extend .country;
+  background-position: -240px -120px;
+}
+
+.country_KI {
+  @extend .country;
+  background-position: -240px -144px;
+}
+
+.country_KM {
+  @extend .country;
+  background-position: -240px -168px;
+}
+
+.country_KN {
+  @extend .country;
+  background-position: -240px -192px;
+}
+
+.country_KP {
+  @extend .country;
+  background-position: -240px -216px;
+}
+
+.country_KR {
+  @extend .country;
+  background-position: -0 -240px;
+}
+
+.country_KW {
+  @extend .country;
+  background-position: -0 -0;
+}
+
+.country_KY {
+  @extend .country;
+  background-position: -48px -240px;
+}
+
+.country_KZ {
+  @extend .country;
+  background-position: -72px -240px;
+}
+
+.country_LA {
+  @extend .country;
+  background-position: -96px -240px;
+}
+
+.country_LB {
+  @extend .country;
+  background-position: -120px -240px;
+}
+
+.country_LC {
+  @extend .country;
+  background-position: -144px -240px;
+}
+
+.country_LI {
+  @extend .country;
+  background-position: -168px -240px;
+}
+
+.country_LK {
+  @extend .country;
+  background-position: -192px -240px;
+}
+
+.country_LR {
+  @extend .country;
+  background-position: -216px -240px;
+}
+
+.country_LS {
+  @extend .country;
+  background-position: -240px -240px;
+}
+
+.country_LT {
+  @extend .country;
+  background-position: -264px -0;
+}
+
+.country_LU {
+  @extend .country;
+  background-position: -264px -24px;
+}
+
+.country_LV {
+  @extend .country;
+  background-position: -264px -48px;
+}
+
+.country_LY {
+  @extend .country;
+  background-position: -264px -72px;
+}
+
+.country_MA {
+  @extend .country;
+  background-position: -264px -96px;
+}
+
+.country_MC {
+  @extend .country;
+  background-position: -264px -120px;
+}
+
+.country_MD {
+  @extend .country;
+  background-position: -264px -144px;
+}
+
+.country_ME {
+  @extend .country;
+  background-position: -264px -168px;
+}
+
+.country_MG {
+  @extend .country;
+  background-position: -264px -192px;
+}
+
+.country_MH {
+  @extend .country;
+  background-position: -264px -216px;
+}
+
+.country_MK {
+  @extend .country;
+  background-position: -264px -240px;
+}
+
+.country_ML {
+  @extend .country;
+  background-position: -0 -264px;
+}
+
+.country_MM {
+  @extend .country;
+  background-position: -24px -264px;
+}
+
+.country_MN {
+  @extend .country;
+  background-position: -48px -264px;
+}
+
+.country_MO {
+  @extend .country;
+  background-position: -72px -264px;
+}
+
+.country_MQ {
+  @extend .country;
+  background-position: -96px -264px;
+}
+
+.country_MR {
+  @extend .country;
+  background-position: -120px -264px;
+}
+
+.country_MS {
+  @extend .country;
+  background-position: -144px -264px;
+}
+
+.country_MT {
+  @extend .country;
+  background-position: -168px -264px;
+}
+
+.country_MU {
+  @extend .country;
+  background-position: -192px -264px;
+}
+
+.country_MV {
+  @extend .country;
+  background-position: -216px -264px;
+}
+
+.country_MW {
+  @extend .country;
+  background-position: -240px -264px;
+}
+
+.country_MX {
+  @extend .country;
+  background-position: -264px -264px;
+}
+
+.country_MY {
+  @extend .country;
+  background-position: -288px -0;
+}
+
+.country_MZ {
+  @extend .country;
+  background-position: -288px -24px;
+}
+
+.country_NA {
+  @extend .country;
+  background-position: -288px -48px;
+}
+
+.country_NC {
+  @extend .country;
+  background-position: -288px -72px;
+}
+
+.country_NE {
+  @extend .country;
+  background-position: -288px -96px;
+}
+
+.country_NG {
+  @extend .country;
+  background-position: -288px -120px;
+}
+
+.country_NI {
+  @extend .country;
+  background-position: -288px -144px;
+}
+
+.country_NL {
+  @extend .country;
+  background-position: -288px -168px;
+}
+
+.country_NO {
+  @extend .country;
+  background-position: -288px -192px;
+}
+
+.country_NP {
+  @extend .country;
+  background-position: -288px -216px;
+}
+
+.country_NR {
+  @extend .country;
+  background-position: -288px -240px;
+}
+
+.country_NZ {
+  @extend .country;
+  background-position: -288px -264px;
+}
+
+.country_OM {
+  @extend .country;
+  background-position: -0 -288px;
+}
+
+.country_PA {
+  @extend .country;
+  background-position: -24px -288px;
+}
+
+.country_PE {
+  @extend .country;
+  background-position: -48px -288px;
+}
+
+.country_PF {
+  @extend .country;
+  background-position: -72px -288px;
+}
+
+.country_PG {
+  @extend .country;
+  background-position: -96px -288px;
+}
+
+.country_PH {
+  @extend .country;
+  background-position: -120px -288px;
+}
+
+.country_PK {
+  @extend .country;
+  background-position: -144px -288px;
+}
+
+.country_PL {
+  @extend .country;
+  background-position: -168px -288px;
+}
+
+.country_PR {
+  @extend .country;
+  background-position: -192px -288px;
+}
+
+.country_PS {
+  @extend .country;
+  background-position: -216px -288px;
+}
+
+.country_PT {
+  @extend .country;
+  background-position: -240px -288px;
+}
+
+.country_PW {
+  @extend .country;
+  background-position: -264px -288px;
+}
+
+.country_PY {
+  @extend .country;
+  background-position: -288px -288px;
+}
+
+.country_QA {
+  @extend .country;
+  background-position: -312px -0;
+}
+
+.country_RE {
+  @extend .country;
+  background-position: -312px -24px;
+}
+
+.country_RO {
+  @extend .country;
+  background-position: -312px -48px;
+}
+
+.country_RS {
+  @extend .country;
+  background-position: -312px -72px;
+}
+
+.country_RU {
+  @extend .country;
+  background-position: -312px -96px;
+}
+
+.country_RW {
+  @extend .country;
+  background-position: -312px -120px;
+}
+
+.country_SA {
+  @extend .country;
+  background-position: -312px -144px;
+}
+
+.country_SB {
+  @extend .country;
+  background-position: -312px -168px;
+}
+
+.country_SC {
+  @extend .country;
+  background-position: -312px -192px;
+}
+
+.country_SD {
+  @extend .country;
+  background-position: -312px -216px;
+}
+
+.country_SE {
+  @extend .country;
+  background-position: -312px -240px;
+}
+
+.country_SG {
+  @extend .country;
+  background-position: -312px -264px;
+}
+
+.country_SI {
+  @extend .country;
+  background-position: -312px -288px;
+}
+
+.country_SK {
+  @extend .country;
+  background-position: -0 -312px;
+}
+
+.country_SL {
+  @extend .country;
+  background-position: -24px -312px;
+}
+
+.country_SM {
+  @extend .country;
+  background-position: -48px -312px;
+}
+
+.country_SN {
+  @extend .country;
+  background-position: -72px -312px;
+}
+
+.country_SO {
+  @extend .country;
+  background-position: -96px -312px;
+}
+
+.country_SR {
+  @extend .country;
+  background-position: -120px -312px;
+}
+
+.country_ST {
+  @extend .country;
+  background-position: -144px -312px;
+}
+
+.country_SV {
+  @extend .country;
+  background-position: -168px -312px;
+}
+
+.country_SY {
+  @extend .country;
+  background-position: -192px -312px;
+}
+
+.country_SZ {
+  @extend .country;
+  background-position: -216px -312px;
+}
+
+.country_TC {
+  @extend .country;
+  background-position: -240px -312px;
+}
+
+.country_TD {
+  @extend .country;
+  background-position: -264px -312px;
+}
+
+.country_TG {
+  @extend .country;
+  background-position: -288px -312px;
+}
+
+.country_TH {
+  @extend .country;
+  background-position: -312px -312px;
+}
+
+.country_TJ {
+  @extend .country;
+  background-position: -336px -0;
+}
+
+.country_TL {
+  @extend .country;
+  background-position: -336px -24px;
+}
+
+.country_TM {
+  @extend .country;
+  background-position: -336px -48px;
+}
+
+.country_TN {
+  @extend .country;
+  background-position: -336px -72px;
+}
+
+.country_TO {
+  @extend .country;
+  background-position: -336px -96px;
+}
+
+.country_TR {
+  @extend .country;
+  background-position: -336px -120px;
+}
+
+.country_TT {
+  @extend .country;
+  background-position: -336px -144px;
+}
+
+.country_TV {
+  @extend .country;
+  background-position: -336px -168px;
+}
+
+.country_TW {
+  @extend .country;
+  background-position: -336px -192px;
+}
+
+.country_TZ {
+  @extend .country;
+  background-position: -336px -216px;
+}
+
+.country_UA {
+  @extend .country;
+  background-position: -336px -240px;
+}
+
+.country_UG {
+  @extend .country;
+  background-position: -336px -264px;
+}
+
+.country_US {
+  @extend .country;
+  background-position: -336px -288px;
+}
+
+.country_UY {
+  @extend .country;
+  background-position: -336px -312px;
+}
+
+.country_UZ {
+  @extend .country;
+  background-position: -0 -336px;
+}
+
+.country_VA {
+  @extend .country;
+  background-position: -24px -336px;
+}
+
+.country_VC {
+  @extend .country;
+  background-position: -48px -336px;
+}
+
+.country_VE {
+  @extend .country;
+  background-position: -72px -336px;
+}
+
+.country_VG {
+  @extend .country;
+  background-position: -96px -336px;
+}
+
+.country_VI {
+  @extend .country;
+  background-position: -120px -336px;
+}
+
+.country_VN {
+  @extend .country;
+  background-position: -144px -336px;
+}
+
+.country_VU {
+  @extend .country;
+  background-position: -168px -336px;
+}
+
+.country_WS {
+  @extend .country;
+  background-position: -192px -336px;
+}
+
+.country_YE {
+  @extend .country;
+  background-position: -216px -336px;
+}
+
+.country_ZA {
+  @extend .country;
+  background-position: -240px -336px;
+}
+
+.country_ZM {
+  @extend .country;
+  background-position: -264px -336px;
+}
+
+.country_ZW {
+  @extend .country;
+  background-position: -288px -336px;
+}
+
+.country_small {
+  height: 16px;
+  width: 18px;
+  background: url(/images/country_sprite_small.png);
+  display: inline-block;
+  vertical-align: sub;
+  border-radius: 2px;
+  border: 1px solid #d0cfcf;
+}
+
+.country_small + * {
+  vertical-align: text-top;
+}
+
+.country_small_AD {
+  @extend .country_small;
+  background-position: -16px -0;
+}
+
+.country_small_AE {
+  @extend .country_small;
+  background-position: -160px -14px;
+}
+
+.country_small_AF {
+  @extend .country_small;
+  background-position: -0 -14px;
+}
+
+.country_small_AG {
+  @extend .country_small;
+  background-position: -16px -14px;
+}
+
+.country_small_AI {
+  @extend .country_small;
+  background-position: -32px -0;
+}
+
+.country_small_AL {
+  @extend .country_small;
+  background-position: -32px -14px;
+}
+
+.country_small_AM {
+  @extend .country_small;
+  background-position: -0 -28px;
+}
+
+.country_small_AN {
+  @extend .country_small;
+  background-position: -16px -28px;
+}
+
+.country_small_AO {
+  @extend .country_small;
+  background-position: -32px -28px;
+}
+
+.country_small_AQ {
+  @extend .country_small;
+  background-position: -48px -0;
+}
+
+.country_small_AR {
+  @extend .country_small;
+  background-position: -48px -14px;
+}
+
+.country_small_AS {
+  @extend .country_small;
+  background-position: -48px -28px;
+}
+
+.country_small_AT {
+  @extend .country_small;
+  background-position: -0 -42px;
+}
+
+.country_small_AU {
+  @extend .country_small;
+  background-position: -16px -42px;
+}
+
+.country_small_AW {
+  @extend .country_small;
+  background-position: -32px -42px;
+}
+
+.country_small_AZ {
+  @extend .country_small;
+  background-position: -48px -42px;
+}
+
+.country_small_BA {
+  @extend .country_small;
+  background-position: -64px -0;
+}
+
+.country_small_BB {
+  @extend .country_small;
+  background-position: -64px -14px;
+}
+
+.country_small_BD {
+  @extend .country_small;
+  background-position: -64px -28px;
+}
+
+.country_small_BE {
+  @extend .country_small;
+  background-position: -64px -42px;
+}
+
+.country_small_BF {
+  @extend .country_small;
+  background-position: -0 -56px;
+}
+
+.country_small_BG {
+  @extend .country_small;
+  background-position: -16px -56px;
+}
+
+.country_small_BH {
+  @extend .country_small;
+  background-position: -32px -56px;
+}
+
+.country_small_BI {
+  @extend .country_small;
+  background-position: -48px -56px;
+}
+
+.country_small_BJ {
+  @extend .country_small;
+  background-position: -64px -56px;
+}
+
+.country_small_BM {
+  @extend .country_small;
+  background-position: -80px -0;
+}
+
+.country_small_BN {
+  @extend .country_small;
+  background-position: -80px -14px;
+}
+
+.country_small_BO {
+  @extend .country_small;
+  background-position: -80px -28px;
+}
+
+.country_small_BR {
+  @extend .country_small;
+  background-position: -80px -42px;
+}
+
+.country_small_BS {
+  @extend .country_small;
+  background-position: -80px -56px;
+}
+
+.country_small_BT {
+  @extend .country_small;
+  background-position: -0 -70px;
+}
+
+.country_small_BW {
+  @extend .country_small;
+  background-position: -16px -70px;
+}
+
+.country_small_BY {
+  @extend .country_small;
+  background-position: -32px -70px;
+}
+
+.country_small_BZ {
+  @extend .country_small;
+  background-position: -48px -70px;
+}
+
+.country_small_CA {
+  @extend .country_small;
+  background-position: -64px -70px;
+}
+
+.country_small_CD {
+  @extend .country_small;
+  background-position: -80px -70px;
+}
+
+.country_small_CF {
+  @extend .country_small;
+  background-position: -96px -0;
+}
+
+.country_small_CG {
+  @extend .country_small;
+  background-position: -96px -14px;
+}
+
+.country_small_CH {
+  @extend .country_small;
+  background-position: -96px -28px;
+}
+
+.country_small_CI {
+  @extend .country_small;
+  background-position: -96px -42px;
+}
+
+.country_small_CK {
+  @extend .country_small;
+  background-position: -96px -56px;
+}
+
+.country_small_CL {
+  @extend .country_small;
+  background-position: -96px -70px;
+}
+
+.country_small_CM {
+  @extend .country_small;
+  background-position: -0 -84px;
+}
+
+.country_small_CN {
+  @extend .country_small;
+  background-position: -16px -84px;
+}
+
+.country_small_CO {
+  @extend .country_small;
+  background-position: -32px -84px;
+}
+
+.country_small_CR {
+  @extend .country_small;
+  background-position: -48px -84px;
+}
+
+.country_small_CU {
+  @extend .country_small;
+  background-position: -64px -84px;
+}
+
+.country_small_CV {
+  @extend .country_small;
+  background-position: -80px -84px;
+}
+
+.country_small_CY {
+  @extend .country_small;
+  background-position: -96px -84px;
+}
+
+.country_small_CZ {
+  @extend .country_small;
+  background-position: -0 -98px;
+}
+
+.country_small_DE {
+  @extend .country_small;
+  background-position: -16px -98px;
+}
+
+.country_small_DJ {
+  @extend .country_small;
+  background-position: -32px -98px;
+}
+
+.country_small_DK {
+  @extend .country_small;
+  background-position: -48px -98px;
+}
+
+.country_small_DM {
+  @extend .country_small;
+  background-position: -64px -98px;
+}
+
+.country_small_DO {
+  @extend .country_small;
+  background-position: -80px -98px;
+}
+
+.country_small_DZ {
+  @extend .country_small;
+  background-position: -96px -98px;
+}
+
+.country_small_EC {
+  @extend .country_small;
+  background-position: -112px -0;
+}
+
+.country_small_EE {
+  @extend .country_small;
+  background-position: -112px -14px;
+}
+
+.country_small_EG {
+  @extend .country_small;
+  background-position: -112px -28px;
+}
+
+.country_small_EH {
+  @extend .country_small;
+  background-position: -112px -42px;
+}
+
+.country_small_ER {
+  @extend .country_small;
+  background-position: -112px -56px;
+}
+
+.country_small_ES {
+  @extend .country_small;
+  background-position: -112px -70px;
+}
+
+.country_small_ET {
+  @extend .country_small;
+  background-position: -112px -84px;
+}
+
+.country_small_FI {
+  @extend .country_small;
+  background-position: -112px -98px;
+}
+
+.country_small_FJ {
+  @extend .country_small;
+  background-position: -0 -112px;
+}
+
+.country_small_FM {
+  @extend .country_small;
+  background-position: -16px -112px;
+}
+
+.country_small_FO {
+  @extend .country_small;
+  background-position: -32px -112px;
+}
+
+.country_small_FR {
+  @extend .country_small;
+  background-position: -48px -112px;
+}
+
+.country_small_GA {
+  @extend .country_small;
+  background-position: -64px -112px;
+}
+
+.country_small_GB {
+  @extend .country_small;
+  background-position: -80px -112px;
+}
+
+.country_small_GD {
+  @extend .country_small;
+  background-position: -96px -112px;
+}
+
+.country_small_GE {
+  @extend .country_small;
+  background-position: -112px -112px;
+}
+
+.country_small_GG {
+  @extend .country_small;
+  background-position: -128px -0;
+}
+
+.country_small_GH {
+  @extend .country_small;
+  background-position: -128px -14px;
+}
+
+.country_small_GI {
+  @extend .country_small;
+  background-position: -128px -28px;
+}
+
+.country_small_GL {
+  @extend .country_small;
+  background-position: -128px -42px;
+}
+
+.country_small_GM {
+  @extend .country_small;
+  background-position: -128px -56px;
+}
+
+.country_small_GN {
+  @extend .country_small;
+  background-position: -128px -70px;
+}
+
+.country_small_GP {
+  @extend .country_small;
+  background-position: -128px -84px;
+}
+
+.country_small_GQ {
+  @extend .country_small;
+  background-position: -128px -98px;
+}
+
+.country_small_GR {
+  @extend .country_small;
+  background-position: -128px -112px;
+}
+
+.country_small_GT {
+  @extend .country_small;
+  background-position: -0 -126px;
+}
+
+.country_small_GU {
+  @extend .country_small;
+  background-position: -16px -126px;
+}
+
+.country_small_GW {
+  @extend .country_small;
+  background-position: -32px -126px;
+}
+
+.country_small_GY {
+  @extend .country_small;
+  background-position: -48px -126px;
+}
+
+.country_small_HK {
+  @extend .country_small;
+  background-position: -64px -126px;
+}
+
+.country_small_HN {
+  @extend .country_small;
+  background-position: -80px -126px;
+}
+
+.country_small_HR {
+  @extend .country_small;
+  background-position: -96px -126px;
+}
+
+.country_small_HT {
+  @extend .country_small;
+  background-position: -112px -126px;
+}
+
+.country_small_HU {
+  @extend .country_small;
+  background-position: -128px -126px;
+}
+
+.country_small_ID {
+  @extend .country_small;
+  background-position: -144px -0;
+}
+
+.country_small_IE {
+  @extend .country_small;
+  background-position: -144px -14px;
+}
+
+.country_small_IL {
+  @extend .country_small;
+  background-position: -144px -28px;
+}
+
+.country_small_IM {
+  @extend .country_small;
+  background-position: -144px -42px;
+}
+
+.country_small_IN {
+  @extend .country_small;
+  background-position: -144px -56px;
+}
+
+.country_small_IQ {
+  @extend .country_small;
+  background-position: -144px -70px;
+}
+
+.country_small_IR {
+  @extend .country_small;
+  background-position: -144px -84px;
+}
+
+.country_small_IS {
+  @extend .country_small;
+  background-position: -144px -98px;
+}
+
+.country_small_IT {
+  @extend .country_small;
+  background-position: -144px -112px;
+}
+
+.country_small_JE {
+  @extend .country_small;
+  background-position: -144px -126px;
+}
+
+.country_small_JM {
+  @extend .country_small;
+  background-position: -0 -140px;
+}
+
+.country_small_JO {
+  @extend .country_small;
+  background-position: -16px -140px;
+}
+
+.country_small_JP {
+  @extend .country_small;
+  background-position: -32px -140px;
+}
+
+.country_small_KE {
+  @extend .country_small;
+  background-position: -48px -140px;
+}
+
+.country_small_KG {
+  @extend .country_small;
+  background-position: -64px -140px;
+}
+
+.country_small_KH {
+  @extend .country_small;
+  background-position: -80px -140px;
+}
+
+.country_small_KI {
+  @extend .country_small;
+  background-position: -96px -140px;
+}
+
+.country_small_KM {
+  @extend .country_small;
+  background-position: -112px -140px;
+}
+
+.country_small_KN {
+  @extend .country_small;
+  background-position: -128px -140px;
+}
+
+.country_small_KP {
+  @extend .country_small;
+  background-position: -144px -140px;
+}
+
+.country_small_KR {
+  @extend .country_small;
+  background-position: -160px -0;
+}
+
+.country_small_KW {
+  @extend .country_small;
+  background-position: -0 -0;
+}
+
+.country_small_KY {
+  @extend .country_small;
+  background-position: -160px -28px;
+}
+
+.country_small_KZ {
+  @extend .country_small;
+  background-position: -160px -42px;
+}
+
+.country_small_LA {
+  @extend .country_small;
+  background-position: -160px -56px;
+}
+
+.country_small_LB {
+  @extend .country_small;
+  background-position: -160px -70px;
+}
+
+.country_small_LC {
+  @extend .country_small;
+  background-position: -160px -84px;
+}
+
+.country_small_LI {
+  @extend .country_small;
+  background-position: -160px -98px;
+}
+
+.country_small_LK {
+  @extend .country_small;
+  background-position: -160px -112px;
+}
+
+.country_small_LR {
+  @extend .country_small;
+  background-position: -160px -126px;
+}
+
+.country_small_LS {
+  @extend .country_small;
+  background-position: -160px -140px;
+}
+
+.country_small_LT {
+  @extend .country_small;
+  background-position: -0 -154px;
+}
+
+.country_small_LU {
+  @extend .country_small;
+  background-position: -16px -154px;
+}
+
+.country_small_LV {
+  @extend .country_small;
+  background-position: -32px -154px;
+}
+
+.country_small_LY {
+  @extend .country_small;
+  background-position: -48px -154px;
+}
+
+.country_small_MA {
+  @extend .country_small;
+  background-position: -64px -154px;
+}
+
+.country_small_MC {
+  @extend .country_small;
+  background-position: -80px -154px;
+}
+
+.country_small_MD {
+  @extend .country_small;
+  background-position: -96px -154px;
+}
+
+.country_small_ME {
+  @extend .country_small;
+  background-position: -112px -154px;
+}
+
+.country_small_MG {
+  @extend .country_small;
+  background-position: -128px -154px;
+}
+
+.country_small_MH {
+  @extend .country_small;
+  background-position: -144px -154px;
+}
+
+.country_small_MK {
+  @extend .country_small;
+  background-position: -160px -154px;
+}
+
+.country_small_ML {
+  @extend .country_small;
+  background-position: -176px -0;
+}
+
+.country_small_MM {
+  @extend .country_small;
+  background-position: -176px -14px;
+}
+
+.country_small_MN {
+  @extend .country_small;
+  background-position: -176px -28px;
+}
+
+.country_small_MO {
+  @extend .country_small;
+  background-position: -176px -42px;
+}
+
+.country_small_MQ {
+  @extend .country_small;
+  background-position: -176px -56px;
+}
+
+.country_small_MR {
+  @extend .country_small;
+  background-position: -176px -70px;
+}
+
+.country_small_MS {
+  @extend .country_small;
+  background-position: -176px -84px;
+}
+
+.country_small_MT {
+  @extend .country_small;
+  background-position: -176px -98px;
+}
+
+.country_small_MU {
+  @extend .country_small;
+  background-position: -176px -112px;
+}
+
+.country_small_MV {
+  @extend .country_small;
+  background-position: -176px -126px;
+}
+
+.country_small_MW {
+  @extend .country_small;
+  background-position: -176px -140px;
+}
+
+.country_small_MX {
+  @extend .country_small;
+  background-position: -176px -154px;
+}
+
+.country_small_MY {
+  @extend .country_small;
+  background-position: -0 -168px;
+}
+
+.country_small_MZ {
+  @extend .country_small;
+  background-position: -16px -168px;
+}
+
+.country_small_NA {
+  @extend .country_small;
+  background-position: -32px -168px;
+}
+
+.country_small_NC {
+  @extend .country_small;
+  background-position: -48px -168px;
+}
+
+.country_small_NE {
+  @extend .country_small;
+  background-position: -64px -168px;
+}
+
+.country_small_NG {
+  @extend .country_small;
+  background-position: -80px -168px;
+}
+
+.country_small_NI {
+  @extend .country_small;
+  background-position: -96px -168px;
+}
+
+.country_small_NL {
+  @extend .country_small;
+  background-position: -112px -168px;
+}
+
+.country_small_NO {
+  @extend .country_small;
+  background-position: -128px -168px;
+}
+
+.country_small_NP {
+  @extend .country_small;
+  background-position: -144px -168px;
+}
+
+.country_small_NR {
+  @extend .country_small;
+  background-position: -160px -168px;
+}
+
+.country_small_NZ {
+  @extend .country_small;
+  background-position: -176px -168px;
+}
+
+.country_small_OM {
+  @extend .country_small;
+  background-position: -192px -0;
+}
+
+.country_small_PA {
+  @extend .country_small;
+  background-position: -192px -14px;
+}
+
+.country_small_PE {
+  @extend .country_small;
+  background-position: -192px -28px;
+}
+
+.country_small_PF {
+  @extend .country_small;
+  background-position: -192px -42px;
+}
+
+.country_small_PG {
+  @extend .country_small;
+  background-position: -192px -56px;
+}
+
+.country_small_PH {
+  @extend .country_small;
+  background-position: -192px -70px;
+}
+
+.country_small_PK {
+  @extend .country_small;
+  background-position: -192px -84px;
+}
+
+.country_small_PL {
+  @extend .country_small;
+  background-position: -192px -98px;
+}
+
+.country_small_PR {
+  @extend .country_small;
+  background-position: -192px -112px;
+}
+
+.country_small_PS {
+  @extend .country_small;
+  background-position: -192px -126px;
+}
+
+.country_small_PT {
+  @extend .country_small;
+  background-position: -192px -140px;
+}
+
+.country_small_PW {
+  @extend .country_small;
+  background-position: -192px -154px;
+}
+
+.country_small_PY {
+  @extend .country_small;
+  background-position: -192px -168px;
+}
+
+.country_small_QA {
+  @extend .country_small;
+  background-position: -0 -182px;
+}
+
+.country_small_RE {
+  @extend .country_small;
+  background-position: -16px -182px;
+}
+
+.country_small_RO {
+  @extend .country_small;
+  background-position: -32px -182px;
+}
+
+.country_small_RS {
+  @extend .country_small;
+  background-position: -48px -182px;
+}
+
+.country_small_RU {
+  @extend .country_small;
+  background-position: -64px -182px;
+}
+
+.country_small_RW {
+  @extend .country_small;
+  background-position: -80px -182px;
+}
+
+.country_small_SA {
+  @extend .country_small;
+  background-position: -96px -182px;
+}
+
+.country_small_SB {
+  @extend .country_small;
+  background-position: -112px -182px;
+}
+
+.country_small_SC {
+  @extend .country_small;
+  background-position: -128px -182px;
+}
+
+.country_small_SD {
+  @extend .country_small;
+  background-position: -144px -182px;
+}
+
+.country_small_SE {
+  @extend .country_small;
+  background-position: -160px -182px;
+}
+
+.country_small_SG {
+  @extend .country_small;
+  background-position: -176px -182px;
+}
+
+.country_small_SI {
+  @extend .country_small;
+  background-position: -192px -182px;
+}
+
+.country_small_SK {
+  @extend .country_small;
+  background-position: -208px -0;
+}
+
+.country_small_SL {
+  @extend .country_small;
+  background-position: -208px -14px;
+}
+
+.country_small_SM {
+  @extend .country_small;
+  background-position: -208px -28px;
+}
+
+.country_small_SN {
+  @extend .country_small;
+  background-position: -208px -42px;
+}
+
+.country_small_SO {
+  @extend .country_small;
+  background-position: -208px -56px;
+}
+
+.country_small_SR {
+  @extend .country_small;
+  background-position: -208px -70px;
+}
+
+.country_small_ST {
+  @extend .country_small;
+  background-position: -208px -84px;
+}
+
+.country_small_SV {
+  @extend .country_small;
+  background-position: -208px -98px;
+}
+
+.country_small_SY {
+  @extend .country_small;
+  background-position: -208px -112px;
+}
+
+.country_small_SZ {
+  @extend .country_small;
+  background-position: -208px -126px;
+}
+
+.country_small_TC {
+  @extend .country_small;
+  background-position: -208px -140px;
+}
+
+.country_small_TD {
+  @extend .country_small;
+  background-position: -208px -154px;
+}
+
+.country_small_TG {
+  @extend .country_small;
+  background-position: -208px -168px;
+}
+
+.country_small_TH {
+  @extend .country_small;
+  background-position: -208px -182px;
+}
+
+.country_small_TJ {
+  @extend .country_small;
+  background-position: -0 -196px;
+}
+
+.country_small_TL {
+  @extend .country_small;
+  background-position: -16px -196px;
+}
+
+.country_small_TM {
+  @extend .country_small;
+  background-position: -32px -196px;
+}
+
+.country_small_TN {
+  @extend .country_small;
+  background-position: -48px -196px;
+}
+
+.country_small_TO {
+  @extend .country_small;
+  background-position: -64px -196px;
+}
+
+.country_small_TR {
+  @extend .country_small;
+  background-position: -80px -196px;
+}
+
+.country_small_TT {
+  @extend .country_small;
+  background-position: -96px -196px;
+}
+
+.country_small_TV {
+  @extend .country_small;
+  background-position: -112px -196px;
+}
+
+.country_small_TW {
+  @extend .country_small;
+  background-position: -128px -196px;
+}
+
+.country_small_TZ {
+  @extend .country_small;
+  background-position: -144px -196px;
+}
+
+.country_small_UA {
+  @extend .country_small;
+  background-position: -160px -196px;
+}
+
+.country_small_UG {
+  @extend .country_small;
+  background-position: -176px -196px;
+}
+
+.country_small_US {
+  @extend .country_small;
+  background-position: -192px -196px;
+}
+
+.country_small_UY {
+  @extend .country_small;
+  background-position: -208px -196px;
+}
+
+.country_small_UZ {
+  @extend .country_small;
+  background-position: -0 -210px;
+}
+
+.country_small_VA {
+  @extend .country_small;
+  background-position: -16px -210px;
+}
+
+.country_small_VC {
+  @extend .country_small;
+  background-position: -32px -210px;
+}
+
+.country_small_VE {
+  @extend .country_small;
+  background-position: -48px -210px;
+}
+
+.country_small_VG {
+  @extend .country_small;
+  background-position: -64px -210px;
+}
+
+.country_small_VI {
+  @extend .country_small;
+  background-position: -80px -210px;
+}
+
+.country_small_VN {
+  @extend .country_small;
+  background-position: -96px -210px;
+}
+
+.country_small_VU {
+  @extend .country_small;
+  background-position: -112px -210px;
+}
+
+.country_small_WS {
+  @extend .country_small;
+  background-position: -128px -210px;
+}
+
+.country_small_YE {
+  @extend .country_small;
+  background-position: -144px -210px;
+}
+
+.country_small_ZA {
+  @extend .country_small;
+  background-position: -160px -210px;
+}
+
+.country_small_ZM {
+  @extend .country_small;
+  background-position: -176px -210px;
+}
+
+.country_small_ZW {
+  @extend .country_small;
+  background-position: -192px -210px;
+}

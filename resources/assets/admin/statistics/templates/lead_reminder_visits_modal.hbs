@@ -1,0 +1,51 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="lead_reminder_visits_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">{{LANG_MESSAGES.visits}}</h4>
+            </div>
+            <div class="modal-body">
+                {{#if visits.length}}
+                    <div class="m-b">
+                        <span class="show_lead_reminder_sended_email link_dotted" data-lead_id="{{lead_id}}">
+                            {{LANG_STATISTICS.show_sended_email}}
+                        </span>
+                    </div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>{{LANG_MESSAGES.date}}</th>
+                            <th>{{LANG_MESSAGES.ip}}</th>
+                            <th>{{LANG_MESSAGES.user_agent}}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#visits}}
+                            <tr>
+                                <td>{{date_format created_at false}}</td>
+                                <td>
+                                    <div class="nowrap">
+                                        <img class="flag" src="{{../CDN_HOST}}{{country.thumb_path}}" width="16"
+                                             alt="{{country.title}}">
+                                        {{country.title}}{{#if city.title}}, {{city.title}} {{/if}}
+                                    </div>
+                                    <small class="text-muted">{{ip}}</small>
+                                </td>
+                                <td><span class="break-all">{{user_agent}}</span></td>
+                            </tr>
+                        {{/visits}}
+                        </tbody>
+                    </table>
+                {{else}}
+                    <h5 class="text-center m-t">{{LANG_STATISTICS.visits_is_not_exist}}</h5>
+                {{/if}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">{{LANG_MESSAGES.close}}</button>
+            </div>
+        </div>
+    </div>
+</div>

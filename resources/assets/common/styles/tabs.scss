@@ -1,0 +1,19 @@
+.nav-tabs > li > a {
+  border-bottom: 1px solid transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border-bottom: 1px solid #2ecc71;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.nav-tabs {
+  margin-bottom: 15px;
+}

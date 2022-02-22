@@ -1,0 +1,86 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="order_info_modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">{{LANG_STATISTICS.online_lead_params}}</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+
+					{{#if order_info.is_corrected}}
+						<div class="form-group">
+							<b>{{LANG_STATISTICS.history_changes}}:</b>
+							<table class="table">
+								<thead>
+								<tr>
+									<td>{{LANG_MESSAGES.date}}</td>
+									<td>{{LANG_MESSAGES.name}}</td>
+									<td>{{LANG_STATISTICS.new_phone}}</td>
+									<td>{{LANG_STATISTICS.old_phone}}</td>
+								</tr>
+								</thead>
+								<tbody>
+								{{#each order_info.history}}
+									<tr>
+										<td>{{date_format date true}}</td>
+										<td>{{name}}</td>
+										<td>{{phone}}</td>
+										<td>{{origin_phone}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					{{/if}}
+
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.name}}:</b> {{order_info.info.name}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.last_name}}:</b> {{order_info.info.last_name}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.email}}:</b> {{order_info.info.email}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.phone}}:</b> {{order_info.phone}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.street}}:</b> {{order_info.info.street}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.house}}:</b> {{order_info.info.house}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.apartment}}:</b> {{order_info.info.apartment}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.zipcode}}:</b> {{order_info.info.zipcode}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_MESSAGES.city}}:</b> {{order_info.info.city}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_STATISTICS.product_cost}}:</b>
+						{{order_info.info.product_cost}}{{order_info.info.product_cost_sign}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_STATISTICS.delivery_cost}}:</b>
+						{{order_info.info.delivery_cost}}{{order_info.info.delivery_cost_sign}}
+					</div>
+					<div class="form-group">
+						<b>{{LANG_STATISTICS.total_cost}}:</b>
+						{{order_info.info.total_cost}}{{order_info.info.total_cost_sign}}
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-right" data-dismiss="modal">
+                    {{LANG_MESSAGES.close}}
+                </button>
+			</div>
+		</div>
+	</div>
+</div>

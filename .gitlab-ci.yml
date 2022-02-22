@@ -1,0 +1,86 @@
+image: gitlab.hhdev.net:4567/affninja/docker.images/builder:latest
+services:
+- docker:dind
+
+stages:
+- build
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN gitlab.hhdev.net:4567
+
+build-prod:
+  stage: build
+  script:
+    - composer install
+    #change domain in nginx config
+    - sed -i "s#affninja.loc#affninja.com#" docker/promo.nginx.conf
+    - sed -i "s#affninja.loc#affninja.com#" docker/my.nginx.conf
+    - sed -i "s#affninja.loc#affninja.com#" docker/control.nginx.conf
+    - sed -i "s#affninja.loc#affninja.com#" docker/office.nginx.conf
+    - sed -i "s#affninja.loc#affninja.com#" docker/support.nginx.conf
+    - sed -i "s#affninja.loc#affninja.com#" docker/manager.nginx.conf
+    #keys & tokens
+    - sed -i "s#^\(APP_KEY\s*=\s*\).*\$#\1${APP_KEY}#" .env
+    - sed -i "s#^\(SENTRY_DSN\s*=\s*\).*\$#\1${SENTRY_DSN}#" .env
+    - sed -i "s#^\(SENTRY_DSN_PUBLIC\s*=\s*\).*\$#\1${SENTRY_DSN_PUBLIC}#" .env
+    - sed -i "s#^\(MAIN_HASHIDS_KEY\s*=\s*\).*\$#\1${MAIN_HASHIDS_KEY}#" .env
+    #version & enviroment
+    - sed -i "s#^\(APP_VERSION\s*=\s*\).*\$#\1${CI_COMMIT_SHA:0:8}#" .env
+    - sed -i "s#^\(APP_ENV\s*=\s*\).*\$#\1production#" .env
+    #debug
+    - sed -i "s#^\(APP_DEBUG\s*=\s*\).*\$#\1false#" .env
+    - sed -i "s#^\(SENTRY_DEBUG\s*=\s*\).*\$#\1true#" .env
+    #templates
+    - sed -i "s#^\(BLADE_OPTIMIZE\s*=\s*\).*\$#\1true#" .env
+    - sed -i "s#^\(FORCE_BLADE_OPTIMIZE\s*=\s*\).*\$#\1true#" .env
+    #domains & hosts
+    - sed -i "s#^\(MAIN_DOMAIN\s*=\s*\).*\$#\1affninja.com#" .env
+    - sed -i "s#^\(API_HOST\s*=\s*\).*\$#\1https://api.affninja.com#" .env
+    - sed -i "s#^\(CDN_HOST\s*=\s*\).*\$#\1https://cdn.affninja.com#" .env
+    - sed -i "s#^\(SOCKET_URL\s*=\s*\).*\$#\1https://api.affninja.com:8081#" .env
+    #install external libs and build static
+    - yarn install
+    - yarn mix production
+    - docker build -t gitlab.hhdev.net:4567/affninja/cabinet.affninja/cabinet:latest . --file=./docker/Dockerfile
+    - docker push gitlab.hhdev.net:4567/affninja/cabinet.affninja/cabinet:latest
+  only:
+    - master
+
+#aff1
+build-aff1:
+  stage: build
+  script:
+    - composer install
+    #change domain in nginx config
+    - sed -i "s#affninja.loc#aff1.com#" docker/aff1/promo.nginx.conf
+    - sed -i "s#affninja.loc#aff1.com#" docker/aff1/my.nginx.conf
+    - sed -i "s#affninja.loc#aff1.com#" docker/aff1/control.nginx.conf
+    - sed -i "s#affninja.loc#aff1.com#" docker/aff1/office.nginx.conf
+    - sed -i "s#affninja.loc#aff1.com#" docker/aff1/support.nginx.conf
+    - sed -i "s#affninja.loc#aff1.com#" docker/aff1/manager.nginx.conf
+    #keys & tokens
+    - sed -i "s#^\(APP_KEY\s*=\s*\).*\$#\1${AFF1_APP_KEY}#" .env
+    - sed -i "s#^\(SENTRY_DSN\s*=\s*\).*\$#\1${AFF1_SENTRY_DSN}#" .env
+    - sed -i "s#^\(SENTRY_DSN_PUBLIC\s*=\s*\).*\$#\1${AFF1_SENTRY_DSN_PUBLIC}#" .env
+    - sed -i "s#^\(MAIN_HASHIDS_KEY\s*=\s*\).*\$#\1${AFF1_MAIN_HASHIDS_KEY}#" .env
+    #version & enviroment
+    - sed -i "s#^\(APP_VERSION\s*=\s*\).*\$#\1${CI_COMMIT_SHA:0:8}#" .env
+    - sed -i "s#^\(APP_ENV\s*=\s*\).*\$#\1production#" .env
+    #debug
+    - sed -i "s#^\(APP_DEBUG\s*=\s*\).*\$#\1false#" .env
+    - sed -i "s#^\(SENTRY_DEBUG\s*=\s*\).*\$#\1true#" .env
+    #templates
+    - sed -i "s#^\(BLADE_OPTIMIZE\s*=\s*\).*\$#\1true#" .env
+    - sed -i "s#^\(FORCE_BLADE_OPTIMIZE\s*=\s*\).*\$#\1true#" .env
+    #domains & hosts
+    - sed -i "s#^\(MAIN_DOMAIN\s*=\s*\).*\$#\1aff1.com#" .env
+    - sed -i "s#^\(API_HOST\s*=\s*\).*\$#\1https://api.aff1.com#" .env
+    - sed -i "s#^\(CDN_HOST\s*=\s*\).*\$#\1https://cdn.aff1.com#" .env
+    - sed -i "s#^\(SOCKET_URL\s*=\s*\).*\$#\1https://api.aff1.com:8081#" .env
+    #install external libs and build static
+    - yarn install
+    - yarn mix production
+    - docker build -t gitlab.hhdev.net:4567/affninja/cabinet.affninja/cabinet:latest_aff1 . --file=./docker/aff1/Dockerfile
+    - docker push gitlab.hhdev.net:4567/affninja/cabinet.affninja/cabinet:latest_aff1
+  only:
+    - master-aff1

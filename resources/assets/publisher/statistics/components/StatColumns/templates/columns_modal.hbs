@@ -1,0 +1,329 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="stat_columns_modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span>&times;</span>
+				</button>
+				<h4 class="modal-title fs17i">{{modal_title}}</h4>
+			</div>
+			<div class="modal-body">
+				<form id="stat_columns_modal_form">
+					<input type="hidden" name="stat_type" value="{{stat_type}}">
+					<div class="form-group">
+						<h5 class="m-b-sm">{{LANG_STATISTICS.th_traffic}}:</h5>
+
+						{{#exists columns.traffic.hits}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-hits" name="hits"
+								       data-group="traffic"
+									{{#if columns.traffic.hits}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-hits">{{LANG_STATISTICS.th_hits}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.traffic.unique_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-unique_count" name="unique_count"
+								       data-group="traffic"
+									{{#if columns.traffic.unique_count}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-unique_count">{{LANG_STATISTICS.th_unique_count}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.traffic.offer_unique_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-offer_unique_count"
+								       name="offer_unique_count" data-group="traffic"
+									{{#if columns.traffic.offer_unique_count}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-offer_unique_count">
+									{{LANG_STATISTICS.th_offer_unique_count}}
+								</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.traffic.transit_hosts}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-transit_hosts"
+								       name="transit_hosts" data-group="traffic"
+									{{#if columns.traffic.transit_hosts}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-transit_hosts">{{LANG_STATISTICS.th_transit_hosts}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.traffic.transit_landing_hosts}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-transit_landing_hosts"
+								       name="transit_landing_hosts" data-group="traffic"
+									{{#if columns.traffic.transit_landing_hosts}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-transit_landing_hosts">{{LANG_STATISTICS.th_transit_landing_hosts}}</label>
+							</div>
+						{{/exists}}
+
+
+						{{#exists columns.traffic.direct_landing_hosts}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-direct_landing_hosts"
+								       name="direct_landing_hosts" data-group="traffic"
+									{{#if columns.traffic.direct_landing_hosts}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-direct_landing_hosts">{{LANG_STATISTICS.th_direct_landing_hosts}}</label>
+							</div>
+						{{/exists}}
+						{{#exists columns.traffic.additional_hosts}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-additional_hosts"
+								       name="additional_hosts" data-group="traffic"
+									{{#if columns.traffic.additional_hosts}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-additional_hosts">{{LANG_STATISTICS.th_additional_hosts}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.traffic.landing_unique_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-landing_unique_count"
+								       name="landing_unique_count" data-group="traffic"
+									{{#if columns.traffic.landing_unique_count}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-landing_unique_count">{{LANG_STATISTICS.th_landing_unique_count}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.traffic.bot_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-bot_count"
+								       name="bot_count" data-group="traffic"
+									{{#if columns.traffic.bot_count}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-bot_count">{{LANG_STATISTICS.th_bot_count}}</label>
+							</div>
+						{{/exists}}
+
+                        {{#exists columns.traffic.safepage_count}}
+                            {{#if CLOAKING}}
+                                <div class="display_i_b m-r-sm checkbox checkbox-success">
+                                    <input class="column" type="checkbox" id="columns_form-safepage_count"
+                                           name="safepage_count" data-group="traffic"
+                                        {{#if columns.traffic.safepage_count}} checked{{/if}}>
+                                    <label class="fw_normal"
+                                           for="columns_form-safepage_count">{{LANG_STATISTICS.th_safepage_count}}</label>
+                                </div>
+                            {{/if}}
+                        {{/exists}}
+
+                        {{#exists columns.traffic.traffback_count}}
+                            <div class="display_i_b m-r-sm checkbox checkbox-success">
+                                <input class="column" type="checkbox" id="columns_form-traffback_count"
+                                       name="traffback_count" data-group="traffic"
+                                    {{#if columns.traffic.traffback_count}} checked{{/if}}>
+                                <label class="fw_normal"
+                                       for="columns_form-traffback_count">{{LANG_STATISTICS.th_traffback_count}}</label>
+                            </div>
+                        {{/exists}}
+                        <hr>
+					</div>
+					<div class="form-group">
+						<h5 class="m-b-sm">{{LANG_STATISTICS.th_coefficients}}:</h5>
+
+						{{#exists columns.coefficient.ctr}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-ctr" name="ctr"
+								       data-group="coefficient"
+									{{#if columns.coefficient.ctr}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-ctr">{{LANG_STATISTICS.th_ctr}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.uc}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-uc" name="uc"
+								       data-group="coefficient"
+									{{#if columns.coefficient.uc}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-uc">{{LANG_STATISTICS.th_uc}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.cr}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-cr" name="cr"
+								       data-group="coefficient"
+									{{#if columns.coefficient.cr}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-cr">{{LANG_STATISTICS.th_cr}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.cr_unique}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-cr_unique" name="cr_unique"
+								       data-group="coefficient"
+									{{#if columns.coefficient.cr_unique}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-cr_unique">{{LANG_STATISTICS.th_cr_unique}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.epc}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-epc" name="epc"
+								       data-group="coefficient"
+									{{#if columns.coefficient.epc}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-epc">{{LANG_STATISTICS.th_epc}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.epc_unique}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-epc_unique" name="epc_unique"
+								       data-group="coefficient"
+									{{#if columns.coefficient.epc_unique}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-epc_unique">{{LANG_STATISTICS.th_epc_unique}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.real_approve}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-real_approve" name="real_approve"
+								       data-group="coefficient"
+									{{#if columns.coefficient.real_approve}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-real_approve">{{LANG_STATISTICS.th_real_approve}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.expected_approve}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-expected_approve"
+								       name="expected_approve" data-group="coefficient"
+									{{#if columns.coefficient.expected_approve}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-expected_approve">{{LANG_STATISTICS.th_expected_approve}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.coefficient.approve}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-approve"
+								       name="approve" data-group="coefficient"
+									{{#if columns.coefficient.approve}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-approve">{{LANG_STATISTICS.th_approve}}</label>
+							</div>
+						{{/exists}}
+                        <hr>
+					</div>
+					<div class="form-group">
+						<h5 class="m-b-sm">{{LANG_STATISTICS.th_conversions}}:</h5>
+
+						{{#exists columns.conversion.total_leads}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-total_leads"
+								       name="total_leads" data-group="conversion"
+									{{#if columns.conversion.total_leads}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-total_leads">{{LANG_STATISTICS.th_total_leads}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.conversion.approved_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-approved_count"
+								       name="approved_count" data-group="conversion"
+									{{#if columns.conversion.approved_count}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-approved_count">{{LANG_STATISTICS.th_approved_count}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.conversion.held_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-held_count" name="held_count"
+								       data-group="conversion"
+									{{#if columns.conversion.held_count}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-held_count">{{LANG_STATISTICS.th_held_count}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.conversion.cancelled_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-cancelled_count"
+								       name="cancelled_count" data-group="conversion"
+									{{#if columns.conversion.cancelled_count}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-cancelled_count">{{LANG_STATISTICS.th_cancelled_count}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.conversion.trashed_count}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-trashed_count"
+								       name="trashed_count"
+								       data-group="conversion"
+									{{#if columns.conversion.trashed_count}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-trashed_count">{{LANG_STATISTICS.th_trashed_count}}</label>
+							</div>
+						{{/exists}}
+                        <hr>
+					</div>
+					<div class="form-group">
+						<h5 class="m-b-sm">{{LANG_MESSAGES.finance}}:</h5>
+
+						{{#exists columns.finance.total_payout}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-total_payout"
+								       name="total_payout" data-group="finance"
+									{{#if columns.finance.total_payout}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-total_payout">{{LANG_STATISTICS.th_total_payout}}</label>
+							</div>
+						{{/exists}}
+
+                        {{#exists columns.finance.leads_payout}}
+                            <div class="display_i_b m-r-sm checkbox checkbox-success">
+                                <input class="column" type="checkbox" id="columns_form-leads_payout"
+                                       name="leads_payout" data-group="finance"
+                                    {{#if columns.finance.leads_payout}} checked{{/if}}>
+                                <label class="fw_normal"
+                                       for="columns_form-leads_payout">{{LANG_STATISTICS.th_leads_payout}}</label>
+                            </div>
+                        {{/exists}}
+
+						{{#exists columns.finance.onhold_payout}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-onhold_payout"
+								       name="onhold_payout"
+								       data-group="finance"
+									{{#if columns.finance.onhold_payout}} checked{{/if}}>
+								<label class="fw_normal" for="columns_form-onhold_payout">{{LANG_STATISTICS.th_onhold_payout}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.finance.oncancel_payout}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-oncancel_payout"
+								       name="oncancel_payout" data-group="finance"
+									{{#if columns.finance.oncancel_payout}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-oncancel_payout">{{LANG_STATISTICS.th_oncancel_payout}}</label>
+							</div>
+						{{/exists}}
+
+						{{#exists columns.finance.ontrash_payout}}
+							<div class="display_i_b m-r-sm checkbox checkbox-success">
+								<input class="column" type="checkbox" id="columns_form-ontrash_payout"
+								       name="ontrash_payout" data-group="finance"
+									{{#if columns.finance.ontrash_payout}} checked{{/if}}>
+								<label class="fw_normal"
+								       for="columns_form-ontrash_payout">{{LANG_STATISTICS.th_ontrash_payout}}</label>
+							</div>
+						{{/exists}}
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-sm btn-success" id="stat_columns_modal_submit">
+                    {{LANG_MESSAGES.save}}
+                </button>
+			</div>
+		</div>
+	</div>
+</div>

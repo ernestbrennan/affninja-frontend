@@ -1,0 +1,98 @@
+.chat-discussion .chat-message.left .message-date {
+  float: none;
+}
+
+.chat-users, .chat-statistic {
+  margin-left: 0;
+  height: 636px;
+}
+
+.message-user {
+  margin-left: 10px;
+}
+
+.chat-message img {
+  margin-top: 5px;
+  margin-right: 0;
+}
+
+.chat-users, .chat-discussion {
+  overflow-x: hidden;
+}
+
+.chat_tickets_wrap, .chat_messages_wrap {
+  height: 100vh;
+  border-right: 1px solid #E4E5E7;
+}
+
+.ticket_item {
+  border-bottom: 1px solid #e7eaec;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 8px 17px;
+}
+
+.ticket_item.active {
+  background-color: #F7F8FA;
+}
+
+.chat_ticket_title {
+  padding: 0;
+  word-break: break-all;
+}
+
+.ticket_list_item {
+  width: 100%;
+  cursor: pointer;
+}
+
+.chat-discussion .chat-message.left .message {
+  margin-left: 0;
+}
+
+.chat-discussion .chat-message.right .message {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.chat-discussion .chat-message.right .message-date {
+  float: none;
+}
+
+.chat_messages_tools {
+  padding: 10px;
+}
+
+.chat-message.left {
+  padding: 10px 10px 10px 0;
+}
+
+.chat-message.right {
+  padding: 10px 0 10px 30px;
+
+  .message {
+    background-color: #ffffe9;
+  }
+}
+
+.chat-discussion .chat-message.right .message-avatar {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.chat-message.admin_message .message {
+  background-color: #fdfdd4;
+}
+
+.chat-discussion .chat-message.left .message-date {
+  float: none;
+}
+
+.chat-message:first-child {
+  padding-top: 0 !important;
+}
+
+.chat-message:last-child {
+  padding-bottom: 0 !important;
+}

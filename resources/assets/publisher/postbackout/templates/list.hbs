@@ -1,0 +1,69 @@
+<table class="table table-hover table-striped table-bordered" id="postbackout_logs_table">
+	<thead>
+	<tr>
+		<th style="width: 110px;">{{ LANG_POSTBACKOUT.th_date }}</th>
+		<th style="width: 80px;">{{ LANG_POSTBACKOUT.th_postback_hash }}</th>
+		<th>{{ LANG_POSTBACKOUT.th_flow }}</th>
+		<th style="width: 80px;">{{ LANG_POSTBACKOUT.th_type }}</th>
+		<th>{{ LANG_POSTBACKOUT.th_url }}</th>
+		<th style="width: 86px;">{{ LANG_POSTBACKOUT.th_status }}</th>
+	</tr>
+	</thead>
+	<tbody>
+	{{#postbackout_logs}}
+		<tr>
+
+			<td>
+					<span title="{{ date }}">{{ date }}</span>
+			</td>
+
+			<td>
+				#{{ postback_hash }}
+			</td>
+
+			<td>
+				{{#if flow_hash}}
+					<a class="" href="/tools/flows/{{ flow_hash }}?tab=flow" target="_blank">{{ flow_title }}</a>
+				{{else}}
+					{{ ../LANG_POSTBACKOUT.global_postbackout }}
+				{{/if}}
+			</td>
+
+			<td>
+				<span data-toggle="tooltip" title="{{ ../LANG_MESSAGES.lead_hash_title }}">#{{ lead_hash }}</span><br>
+
+				{{#ifCond type '==' 'lead_add'}}
+					<span class="label label-default">{{ ../LANG_POSTBACKOUT.lead_add_type }}</span>
+				{{/ifCond}}
+
+				{{#ifCond type '==' 'lead_approve'}}
+					<span class="label label-success">{{ ../LANG_POSTBACKOUT.lead_approve_type }}</span>
+				{{/ifCond}}
+
+				{{#ifCond type '==' 'lead_cancel'}}
+					<span class="label label-danger">{{ ../LANG_POSTBACKOUT.lead_cancel_type }}</span>
+				{{/ifCond}}
+			</td>
+
+			<td>
+				{{smartSubstr url 60 'bottom'}}
+			</td>
+
+			<td>
+				{{#ifCond status '==' 'success'}}
+					<span class="label label-success">{{ ../LANG_POSTBACKOUT.success_status }}</span>
+				{{/ifCond}}
+
+				{{#ifCond status '==' 'fail'}}
+					<span class="label label-danger">{{ ../LANG_POSTBACKOUT.fail_status }}</span>
+				{{/ifCond}}
+			</td>
+
+		</tr>
+	{{/postbackout_logs}}
+	</tbody>
+</table>
+
+{{#unless postbackout_logs}}
+	<h5 class="text-center m-t">{{ LANG_POSTBACKOUT.on_get_list_not_found }}</h5>
+{{/unless}}

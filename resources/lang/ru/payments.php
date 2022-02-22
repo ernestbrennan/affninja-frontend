@@ -1,0 +1,26 @@
+<?php
+
+return [
+	'index_title' => 'Выплаты',
+	'not_found' => 'По заданным условиям выплат нет',
+	'pending_tab' => 'В ожидании',
+	'accepted_tab' => 'Генерация выплаты',
+	'paid_tab' => 'Выплаченные',
+    'cancelled_tab' => 'Отмененные',
+    'date_th' => 'Дата',
+	'payout_th' => 'Сумма',
+    'payment_system' => 'Платежная система',
+	'requisites' => 'Реквизиты',
+	'user_th' => 'Юзер',
+	'on_cancel_msg' => 'Отменить выплату?',
+	'on_accept_msg' => 'Принять выплату?',
+	'on_paid_msg' => 'Выплатить?',
+    'not_confirm' => 'Не запрашивать подтверждение',
+    'payment_hash' => 'Hash',
+	'who_accepted' => 'Подтвердил',
+	'who_paid' => 'Выплатил',
+	'who_cancelled' => 'Отменил',
+	'payments_history' => 'История выплат',
+    'all_payments' => 'Все выплаты',
+	'' => '',
+];

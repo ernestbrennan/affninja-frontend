@@ -1,0 +1,132 @@
+.sweet-alert {
+  padding: 0;
+  border-radius: 0;
+}
+
+.sweet-alert h2 {
+  font-size: 18px;
+  background: #f7f9fa;
+  margin: 0;
+  padding: 10px 15px;
+  font-weight: 300;
+  text-align: left;
+  line-height: 1.5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sweet-alert p {
+  text-align: left;
+  padding: 15px;
+}
+
+.sweet-alert button {
+  padding: 4px 16px;
+  border-radius: 3px;
+  font-size: 15px;
+  background-color: #fff !important;
+  border-color: #e4e5e7 !important;
+  color: #6a6c6f;
+  margin: 0 15px 0 0;
+}
+
+.sweet-alert button:hover {
+  background-color: #fff;
+  border-color: #d9dbdd;
+  color: #606265
+}
+
+.sweet-alert.error-alert button.confirm {
+  background-color: #e74c3c !important;
+  border-color: #e74c3c !important;
+  color: #fff;
+}
+
+.sweet-alert.error-alert button.confirm:hover {
+  background-color: #ea6557 !important;
+  border-color: #ea6557 !important;
+  color: #fff;
+}
+
+.sweet-alert.success-alert button.confirm {
+  background-color: $green !important;
+  border-color: $green !important;
+  color: #fff;
+}
+
+.sweet-alert.success-alert button.confirm:hover {
+  background-color: $green-black !important;
+  border-color: $green-black !important;
+  color: #fff;
+}
+
+.sweet-alert .icon {
+  display: none;
+}
+
+.sweet-alert > p:empty {
+  padding: 0;
+}
+
+.sweet-alert > p:not(:empty) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sa-button-container {
+  padding: 10px 15px;
+  background: #f7f9fa;
+}
+
+.sweet-alert > p:empty ~ .sa-button-container {
+  background: #fff;
+}
+
+.sweet-alert .sa-button-container {
+  text-align: left;
+}
+
+.sweet-alert .sa-confirm-button-container {
+  float: left;
+}
+
+.sweet-alert button.confirm {
+  height: 30px;
+}
+
+.sweet-alert .cancel {
+  display: inline-block;
+}
+
+.sweet-alert button.confirm,
+.sweet-alert .cancel {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.sweet-alert .cancel {
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e4e5e7 !important;
+  color: #6a6c6f;
+}
+
+.sweet-alert button.cancel:focus {
+  box-shadow: none !important;
+}
+
+.sweet-alert .cancel:hover,
+.sweet-alert .cancel:focus {
+  border-color: #d9dbdd !important;
+  color: #606265 !important;
+}
+
+.sweet-alert button.cancel:active {
+  background-color: #d4d4d4 !important;
+  border-color: #8c8c8c !important;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125) !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125) !important;
+}
+
+.sweet-alert .cancel .badge {
+  text-shadow: none;
+}

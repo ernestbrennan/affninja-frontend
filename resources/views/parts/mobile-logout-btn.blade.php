@@ -1,0 +1,2 @@
+<a id="mobile-logout-navbar" class="ladda-button logout" data-spinner-color="gray" data-style="slide-left" href="#"
+><span class="ladda-label"><i class="pe pe-7s-power"></i><span>{{ trans('navbar.logout') }}</span></span></a>

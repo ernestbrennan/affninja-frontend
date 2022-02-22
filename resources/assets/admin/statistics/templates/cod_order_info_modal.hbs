@@ -1,0 +1,62 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="order_info_modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">{{LANG_STATISTICS.order_parameters}}</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+
+					{{#if order_info.is_corrected}}
+						<div class="form-group">
+							<b>{{LANG_STATISTICS.history_changes}}:</b>
+							<table class="table">
+								<thead>
+								<tr>
+									<td>{{LANG_MESSAGES.date}}</td>
+									<td>{{LANG_MESSAGES.name}}</td>
+									<td>{{LANG_STATISTICS.new_phone}}</td>
+									<td>{{LANG_STATISTICS.old_phone}}</td>
+								</tr>
+								</thead>
+								<tbody>
+								{{#each order_info.history}}
+									<tr>
+										<td>{{date_format date true}}</td>
+										<td>{{name}}</td>
+										<td>{{phone}}</td>
+										<td>{{origin_phone}}</td>
+									</tr>
+								{{/each}}
+								</tbody>
+							</table>
+						</div>
+					{{/if}}
+
+					{{#if products_hashes}}
+						<div class="form-group">
+							<b>{{LANG_STATISTICS.product_hashes}}:</b> {{products_hashes}}
+						</div>
+					{{/if}}
+
+					{{#if order_info.address}}
+						<div class="form-group">
+							<b>{{LANG_MESSAGES.address}}:</b> {{order_info.address}}
+						</div>
+					{{/if}}
+
+					{{#if order_info.email}}
+						<div class="form-group">
+							<b>{{LANG_MESSAGES.email}}:</b> {{order_info.email}}
+						</div>
+					{{/if}}
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">{{LANG_MESSAGES.close}}</button>
+			</div>
+		</div>
+	</div>
+</div>

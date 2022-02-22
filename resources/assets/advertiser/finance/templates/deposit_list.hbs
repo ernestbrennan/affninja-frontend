@@ -1,0 +1,24 @@
+<table class="table table-hover table-striped table-bordered text-left" id="{{table_identifier}}">
+    <thead>
+    <tr>
+        <th style="width: 60px;">{{LANG_MESSAGES.hash}}</th>
+        <th style="width: 110px;">{{LANG_FINANCE.table_date}}</th>
+        <th style="width: 100px;">{{LANG_FINANCE.table_payout}}</th>
+        <th>{{LANG_MESSAGES.comment}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each deposits}}
+        <tr>
+            <td>#{{hash}}</td>
+            <td>{{date_format created_at false}}</td>
+            <td>{{{getFinancePayout sum}}}{{{currecy_sign}}}</td>
+            <td>{{description}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+{{#unless deposits}}
+    <h5 class="text-center m-t">{{LANG_FINANCE.deposit_not_found}}</h5>
+{{/unless}}

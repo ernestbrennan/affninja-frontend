@@ -1,0 +1,231 @@
+@import "node_modules/font-awesome/css/font-awesome.min";
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+  z-index: 1;
+}
+
+[class^="pe-7s-"], [class*=" pe-7s-"] {
+  display: inline-block;
+  font-family: 'Pe-icon-7-stroke';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav.nav-tabs .btn-group {
+  position: relative;
+  top: 13px;
+  right: 15px;
+}
+
+.landing-page header {
+  margin-bottom: 0;
+}
+
+.landing-page .header-info {
+  padding-top: 80px;
+}
+
+.new-promo-navbar {
+  height: 55px;
+  border-top: none;
+  z-index: 100 !important;
+}
+
+.new-promo-navbar .container {
+  height: 100%;
+}
+
+.new-promo-navbar .navbar-right {
+  height: 100%;
+}
+
+.new-promo-navbar .navbar-right li a {
+  padding: 0 15px;
+  padding-bottom: 1px;
+  display: flex;
+  align-items: center;
+  border-bottom: none;
+}
+
+.new-promo-navbar .navbar-header {
+  height: 100%;
+}
+
+.new-promo-navbar .logo {
+  height: 100%;
+  background: transparent;
+}
+
+.new-promo-navbar .logo a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.new-promo-navbar .logo-svg {
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.new-promo-content {
+  background: white;
+  min-height: 100%;
+  padding-top: 70px;
+}
+
+.landing-page section {
+  background: white;
+}
+
+.landing-page section.bg-light {
+  background: #f7f9fa;
+}
+
+.reg-form {
+  background: white;
+  border: 1px solid #e4e5e7;
+  padding: 0;
+  border-top: 2px solid #62cb31;
+}
+
+.publishers h4,
+.advertisers h4 {
+  margin-top: 20px;
+}
+
+.reg-form .header {
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px solid #e4e5e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reg-form .header h4 {
+  margin-top: 10px;
+}
+
+.reg-form .form-body {
+  padding: 20px;
+}
+
+.reg-form .small {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+.reg-form .form-group.has-error button {
+  border-top: 1px solid #e74c3c;
+  border-right: 1px solid #e74c3c;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.reg-form .form-group.has-error .form-control:focus {
+  border-right: 1px solid #e4e5e7 !important;
+  transition: unset;
+}
+
+.heading-image {
+  z-index: 1;
+}
+
+.checkbox-rules {
+  background: #edf1f4;
+  padding: 10px;
+  padding-left: 28px;
+}
+
+.form-horizontal.contact-form .control-label {
+  text-align: left;
+}
+
+.grecaptcha-container {
+  border: 1px solid #e4e5e7;
+  border-radius: 4px;
+  display: inline-block;
+  max-width: 241px;
+  overflow: hidden;
+  height: 61px;
+  margin-bottom: 11px;
+}
+
+.grecaptcha-container .g-recaptcha {
+  transform: scale(0.8);
+  transform-origin: 0 0;
+  height: 61px;
+  position: relative;
+  left: -1px;
+  top: -1px;
+}
+
+.reg-form .grecaptcha-container.has-error {
+  border: 1px solid #e74c3c;
+}
+
+@media (max-width: 1200px) {
+  .landing-page .heading {
+    text-align: left;
+  }
+
+  .landing-page .heading p.small {
+    margin: 0;
+    padding: 5px 0 15px 0;
+  }
+
+  .landing-page .heading-image {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .new-promo-navbar .navbar-collapse {
+    background: white;
+  }
+
+  .landing-page .heading-image {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 65px;
+  }
+}
+
+// Only login form in page
+.promo-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.reg-form,
+.publishers-reg-form {
+  margin-top: 20vh;
+  flex-basis: 500px;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .reg-form,
+  .publishers-reg-form {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .reg-form,
+  .publishers-reg-form {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}

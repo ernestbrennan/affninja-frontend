@@ -1,0 +1,104 @@
+.news-section {
+  padding: 15px 10px;
+  overflow-y: visible;
+  height: auto;
+}
+
+.news-message {
+  padding: 10px 20px;
+}
+
+.news-section .message {
+  background-color: #f7f8fa;
+  text-align: left;
+  display: block;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.news-section .news-message .message-date {
+  float: none;
+}
+
+.news-section .news-message .message {
+  text-align: left;
+  margin-left: 55px;
+}
+
+.news-section .news-message.left .message-date {
+  float: none;
+}
+
+.news-section .news-message.right .message-date {
+  float: left;
+}
+
+.news-section .news-message.left .message {
+  text-align: left;
+  margin-left: 55px;
+}
+
+.news-section .news-message.right .message {
+  text-align: left;
+  margin-right: 55px;
+}
+
+.news-section .news-message .message-icon {
+  float: left;
+  margin-right: 10px;
+}
+
+.news-section .news-message.left .message-icon {
+  float: left;
+  margin-right: 10px;
+}
+
+.news-section .news-message.right .message-icon {
+  float: right;
+  margin-left: 10px;
+}
+
+.news-message .message-title {
+  font-size: 15px;
+}
+
+.news-section .news-message .message {
+  margin-left: 0;
+}
+
+.news-section .news-message .message-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.news-section .news-message .message-date {
+  font-weight: bold;
+}
+
+.dropdown-menu.hdropdown.news li {
+  padding: 12px 12px;
+}
+
+.dropdown-menu.hdropdown.news li .label {
+  margin-right: 10px;
+}
+
+.dashboard {
+  .news {
+    margin-bottom: 15px;
+    border: 1px solid #e4e5e7;
+    border-radius: 3px;
+    padding: 15px;
+
+    &.title {
+      margin: 0 0 10px 0;
+    }
+    &.body p {
+      margin: 0 0 5px 0;
+    }
+  }
+  .news:last-child {
+    margin-bottom: 0;
+  }
+}

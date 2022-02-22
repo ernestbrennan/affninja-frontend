@@ -1,0 +1,461 @@
+<table class="table table-striped stat_table table-bordered table-highlight" id="landing_stat_table">
+    <thead>
+    <tr class="stat_table_head_top_tr">
+        <th></th>
+
+        {{#ifCond count_traffic_columns '>' 0}}
+            <th colspan="{{count_traffic_columns}}" class="stat_table__title">
+                <span class="stat_table_title_wrap">
+                    <span class="stat_table_top_title">{{LANG_STATISTICS.th_traffic}}</span>
+                    <span class="table_th_border_circle"></span>
+                </span>
+            </th>
+        {{/ifCond}}
+
+        {{#ifCond count_coefficient_columns '>' 0}}
+            <th colspan="{{count_coefficient_columns}}" class="stat_table__title">
+                <span class="stat_table_title_wrap">
+                    <span class="stat_table_top_title">{{LANG_STATISTICS.th_coefficients}}</span>
+                    <span class="table_th_border_circle"></span>
+                </span>
+            </th>
+        {{/ifCond}}
+
+        {{#ifCond count_conversion_columns '>' 0}}
+            <th colspan="{{count_conversion_columns}}" class="stat_table__title">
+                <span class="stat_table_title_wrap">
+                    <span class="stat_table_top_title">{{LANG_STATISTICS.th_conversions}}</span>
+                    <span class="table_th_border_circle"></span>
+                </span>
+            </th>
+        {{/ifCond}}
+
+        {{#ifCond count_finance_columns '>' 0}}
+            <th colspan="{{count_finance_columns}}" class="stat_table__title">
+                <span class="stat_table_title_wrap">
+                    <span class="stat_table_top_title">{{{th_finance}}}</span>
+                    <span class="table_th_border_circle"></span>
+                </span>
+            </th>
+        {{/ifCond}}
+    </tr>
+    <tr>
+        <th><span data-toggle="tooltip" title="{{LANG_STATISTICS.th_landing_title}}">{{LANG_STATISTICS.th_landing}}</span></th>
+
+        {{#if enabled_columns.traffic.hits}}
+            <th data-column="hits"><span data-toggle="tooltip" title="{{LANG_STATISTICS.th_hits_title}}">{{LANG_STATISTICS.th_hits}}</span></th>
+        {{/if}}
+
+        {{#if enabled_columns.traffic.unique_count}}
+            <th data-column="unique_count"><span data-toggle="tooltip" title="{{LANG_STATISTICS.th_unique_count_title}}">{{LANG_STATISTICS.th_landing_unique_count}}</span></th>
+        {{/if}}
+
+        {{#if enabled_columns.traffic.transit_landing_hosts}}
+            <th data-column="transit_landing_hosts">
+                <span data-toggle="tooltip"
+                      title="{{LANG_STATISTICS.th_transit_landing_hosts_title}}">
+                    {{LANG_STATISTICS.th_transit_landing_hosts}}
+                </span>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.traffic.direct_landing_hosts}}
+            <th data-column="direct_landing_hosts">
+                <span data-toggle="tooltip"
+                      title="{{LANG_STATISTICS.th_direct_landing_hosts_title}}">
+                    {{LANG_STATISTICS.th_direct_landing_hosts}}
+                </span>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.traffic.additional_hosts}}
+            <th data-column="additional_hosts">
+                <span data-toggle="tooltip"
+                      title="{{LANG_STATISTICS.th_additional_hosts_title}}">
+                    {{LANG_STATISTICS.th_additional_hosts}}
+                </span>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.coefficient.cr_unique}}
+            <th data-column="cr_unique">
+                <span data-toggle="tooltip" title="{{LANG_STATISTICS.th_cr_unique_title}}">
+                    {{LANG_STATISTICS.th_cr_unique}}
+                </span>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.coefficient.epc_unique}}
+            <th data-column="epc_unique">
+                <span data-toggle="tooltip" title="{{LANG_STATISTICS.th_epc_unique_title}}">
+                    {{LANG_STATISTICS.th_epc_unique}}
+                </span>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.coefficient.real_approve}}
+            <th class="stat_approve_th" data-column="real_approve">
+                <i class="action_icon action_icon_operator_green" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_real_approve}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.coefficient.expected_approve}}
+            <th class="stat_approve_th" data-column="expected_approve">
+                <i class="action_icon action_icon_operator_orange" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_expected_approve}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.coefficient.approve}}
+            <th class="stat_approve_th" data-column="approve">
+                <i class="action_icon action_icon_operator_grey" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_approve}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.conversion.total_leads}}
+            <th data-column="total_leads">
+                <i class="action_icon action_icon_total" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_total_leads}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.conversion.approved_count}}
+            <th data-column="approved_count">
+                <i class="action_icon action_icon_check" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_approved_count}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.conversion.held_count}}
+            <th data-column="held_count">
+                <i class="action_icon action_icon_wait" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_held_count}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.conversion.cancelled_count}}
+            <th data-column="cancelled_count">
+                <i class="action_icon action_icon_cancell" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_cancelled_count}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.conversion.trashed_count}}
+            <th data-column="trashed_count">
+                <i class="action_icon action_icon_trash" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_trashed_count}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.finance.total_payout}}
+            <th data-column="total_payout">
+                <i class="action_icon action_icon_total" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_total_payout}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.finance.leads_payout}}
+            <th data-column="leads_payout">
+                <i class="action_icon action_icon_check" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_leads_payout}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.finance.onhold_payout}}
+            <th data-column="onhold_payout">
+                <i class="action_icon action_icon_wait" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_onhold_payout}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.finance.oncancel_payout}}
+            <th data-column="oncancel_payout">
+                <i class="action_icon action_icon_cancell" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_oncancel_payout}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.finance.ontrash_payout}}
+            <th data-column="ontrash_payout">
+                <i class="action_icon action_icon_trash" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_ontrash_payout}}"></i>
+            </th>
+        {{/if}}
+
+        {{#if enabled_columns.finance.profit}}
+            <th data-column="profit">
+                <i aria-hidden="true" class="fa fa-arrow-down green_t" data-toggle="tooltip"
+                   title="{{LANG_STATISTICS.th_profit}}"></i>
+            </th>
+        {{/if}}
+    </tr>
+
+    </thead>
+    <tbody>
+    {{#items}}
+        <tr style="background-color: {{tr_color}} !important;">
+
+            <td>
+				<span class="nowrap" data-toggle="tooltip"
+                      title="{{{landing_title}}}{{#if landing_locale}}: {{landing_locale.title}}{{/if}}">
+					{{#if landing_locale}}
+                        [{{landing_locale.code}}]
+                    {{/if}}
+
+                    {{{landing_title}}}
+				</span>
+            </td>
+
+            {{#if ../enabled_columns.traffic.hits}}
+                <td data-column="hits">{{{highlight_zero hits}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.traffic.unique_count}}
+                <td data-column="unique_count">{{{highlight_zero unique_count}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.traffic.transit_landing_hosts}}
+                <td data-column="transit_landing_hosts">{{{highlight_zero transit_landing_hosts}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.traffic.direct_landing_hosts}}
+                <td data-column="direct_landing_hosts">{{{highlight_zero direct_landing_hosts}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.traffic.additional_hosts}}
+                <td data-column="additional_hosts">{{{highlight_zero additional_hosts}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.coefficient.cr_unique}}
+                <td data-column="cr_unique"><span data-title="{{ cr_unique }}">{{{highlight_zero cr_unique '%'}}}</span>
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.coefficient.epc_unique}}
+                <td data-column="epc_unique">{{{highlight_zero epc_unique}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.coefficient.real_approve}}
+                <td data-column="real_approve">
+                    {{#if real_approve}}
+                        {{{highlight_zero real_approve '%'}}}
+                    {{else}}
+                        -
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.coefficient.expected_approve}}
+                <td data-column="expected_approve">
+                    {{#if expected_approve}}
+                        {{{highlight_zero expected_approve '%'}}}
+                    {{else}}
+                        -
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.coefficient.approve}}
+                <td data-column="approve">
+                    {{#if approve}}
+                        {{{highlight_zero approve '%'}}}
+                    {{else}}
+                        -
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.conversion.total_leads}}
+                <td data-column="total_leads">{{#if total_leads }}<a  href="{{leads_link}}" target="_blank">{{{highlight_zero total_leads}}}</a>{{else}}{{{highlight_zero total_leads}}}{{/if}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.conversion.approved_count}}
+                <td data-column="approved_count">
+                    {{#if approved_count}}
+                        <a href="{{leads_link}}&lead_statuses[]=approved" target="_blank">
+                            {{{highlight_zero approved_count}}}
+                        </a>
+                    {{else}}
+                        {{{highlight_zero approved_count}}}
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.conversion.held_count}}
+                <td data-column="held_count">
+                    {{#if held_count}}
+                        <a href="{{leads_link}}&lead_statuses[]=new" target="_blank">
+                            {{{highlight_zero held_count}}}
+                        </a>
+                    {{else}}
+                        {{{highlight_zero held_count}}}
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.conversion.cancelled_count}}
+                <td data-column="cancelled_count">
+                    {{#if cancelled_count}}
+                        <a href="{{leads_link}}&lead_statuses[]=cancelled" target="_blank">
+                            {{{highlight_zero cancelled_count}}}
+                        </a>
+                    {{else}}
+                        {{{highlight_zero cancelled_count}}}
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.conversion.trashed_count}}
+                <td data-column="trashed_count">
+                    {{#if trashed_count}}
+                        <a href="{{leads_link}}&lead_statuses[]=trashed" target="_blank">
+                            {{{highlight_zero trashed_count}}}
+                        </a>
+                    {{else}}
+                        {{{highlight_zero trashed_count}}}
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if ../enabled_columns.finance.total_payout}}
+                <td data-column="total_payout">{{{chain "toFixed" "highlight_zero" total_payout 2}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.finance.leads_payout}}
+                <td data-column="leads_payout">{{{chain "toFixed" "highlight_zero" leads_payout 2}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.finance.onhold_payout}}
+                <td data-column="onhold_payout">{{{chain "toFixed" "highlight_zero" onhold_payout 2}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.finance.oncancel_payout}}
+                <td data-column="oncancel_payout">{{{chain "toFixed" "highlight_zero" oncancel_payout 2}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.finance.ontrash_payout}}
+                <td data-column="ontrash_payout">{{{chain "toFixed" "highlight_zero" ontrash_payout 2}}}</td>
+            {{/if}}
+
+            {{#if ../enabled_columns.finance.profit}}
+                <td data-column="profit" class="money-td">{{{chain "toFixed" "highlight_zero" profit 2}}}</td>
+            {{/if}}
+        </tr>
+    {{/items}}
+    </tbody>
+    {{#if items}}
+        <tfoot>
+        <tr class="total-footer">
+            <td><b>{{LANG_STATISTICS.total}}</b></td>
+
+            {{#if enabled_columns.traffic.hits}}
+                <td data-column="hits">{{{chain "parseInt" "highlight_zero" total_hits}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.traffic.unique_count}}
+                <td data-column="unique_count">{{{highlight_zero total_unique_count}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.traffic.transit_landing_hosts}}
+                <td data-column="transit_landing_hosts">{{{highlight_zero total_transit_landing_hosts}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.traffic.direct_landing_hosts}}
+                <td data-column="direct_landing_hosts">{{{highlight_zero total_direct_landing_hosts}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.traffic.additional_hosts}}
+                <td data-column="additional_hosts">{{{highlight_zero total_additional_hosts}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.coefficient.cr_unique}}
+                <td data-column="cr_unique">{{{highlight_zero total_cr_unique '%'}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.coefficient.epc_unique}}
+                <td data-column="epc_unique">{{{highlight_zero total_epc_unique}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.coefficient.real_approve}}
+                <td data-column="real_approve">
+                    {{#if total_real_approve}}
+                        {{{highlight_zero total_real_approve '%'}}}
+                    {{else}}
+                        -
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if enabled_columns.coefficient.expected_approve}}
+                <td data-column="expected_approve">
+                    {{#if total_expected_approve}}
+                        {{{highlight_zero total_expected_approve '%'}}}
+                    {{else}}
+                        -
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if enabled_columns.coefficient.approve}}
+                <td data-column="approve">
+                    {{#if total_approve}}
+                        {{{highlight_zero total_approve '%'}}}
+                    {{else}}
+                        -
+                    {{/if}}
+                </td>
+            {{/if}}
+
+            {{#if enabled_columns.conversion.total_leads}}
+                <td data-column="total_leads">                    {{#if total_total_leads }}                        <a  href="{{total_leads_link}}" target="_blank">                            {{{highlight_zero total_total_leads}}}                        </a>                    {{else}}                        {{{highlight_zero total_total_leads}}}                    {{/if}}                </td>
+            {{/if}}
+
+            {{#if enabled_columns.conversion.approved_count}}
+                <td data-column="approved_count">                    {{#if total_approved_count}}                        <a  href="{{total_leads_link}}&lead_statuses[]=approved" target="_blank">                            {{{highlight_zero total_approved_count}}}                        </a>                    {{else}}                        {{{highlight_zero total_approved_count}}}                    {{/if}}                </td>
+            {{/if}}
+
+            {{#if enabled_columns.conversion.held_count}}
+                <td data-column="held_count">                    {{#if total_held_count}}                        <a  href="{{total_leads_link}}&lead_statuses[]=new" target="_blank">                            {{{chain "parseInt" "highlight_zero" total_held_count}}}                        </a>                    {{else}}                        {{{chain "parseInt" "highlight_zero" total_held_count}}}                    {{/if}}                </td>
+            {{/if}}
+
+            {{#if enabled_columns.conversion.cancelled_count}}
+                <td data-column="cancelled_count">                    {{#if total_cancelled_count}}                        <a  href="{{total_leads_link}}&lead_statuses[]=cancelled" target="_blank">                            {{{chain "parseInt" "highlight_zero" total_cancelled_count}}}                        </a>                    {{else}}                        {{{chain "parseInt" "highlight_zero" total_cancelled_count}}}                    {{/if}}                </td>
+            {{/if}}
+
+            {{#if enabled_columns.conversion.trashed_count}}
+                                <td data-column="trashed_count">                    {{#if total_trashed_count}}                        <a  href="{{total_leads_link}}&lead_statuses[]=trashed" target="_blank">                            {{{highlight_zero total_trashed_count}}}                        </a>                    {{else}}                        {{{highlight_zero total_trashed_count}}}                    {{/if}}                </td>
+            {{/if}}
+
+            {{#if enabled_columns.finance.total_payout}}
+                <td data-column="total_payout">{{{chain "toFixed" "highlight_zero" total_total_payout 2}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.finance.leads_payout}}
+                <td data-column="leads_payout">{{{chain "toFixed" "highlight_zero" total_leads_payout 2}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.finance.onhold_payout}}
+                <td data-column="onhold_payout">{{{chain "toFixed" "highlight_zero" total_onhold_payout 2}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.finance.oncancel_payout}}
+                <td data-column="oncancel_payout">{{{chain "toFixed" "highlight_zero" total_oncancel_payout 2}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.finance.ontrash_payout}}
+                <td data-column="ontrash_payout">{{{chain "toFixed" "highlight_zero" total_ontrash_payout 2}}}</td>
+            {{/if}}
+
+            {{#if enabled_columns.finance.profit}}
+                <td data-column="profit" class="money-td">{{{chain "toFixed" "highlight_zero" total_profit 2}}} </td>
+            {{/if}}
+        </tr>
+        </tfoot>
+    {{/if}}
+</table>
+
+{{#unless items}}
+    <h5 class="text-center m-t">{{LANG_STATISTICS.stat_is_empty}}</h5>
+{{/unless}}

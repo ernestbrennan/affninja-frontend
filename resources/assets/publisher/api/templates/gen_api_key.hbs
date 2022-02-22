@@ -1,0 +1,26 @@
+<div class="form-group">
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<div class="input-group">
+				<input type="text" class="form-control" id="api_key" readonly value="{{ api_key  }}">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default copy_to_clipboard" style="padding: 6px 12px;"
+					        data-clipboard-demo="" data-clipboard-target="#api_key"
+					        title="{{ LANG_MESSAGES.copy_to_clipboard }}"
+					        data-toggle="tooltip" >
+						<img class="clippy" src="/images/clippy.svg" width="13"
+						     alt="{{ LANG_MESSAGES.copy_to_clipboard }}">
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="row m-t">
+		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
+			<button class="btn btn-success" id="regenerate_api_key">
+				<i class="fa fa-refresh" aria-hidden="true"></i> {{  LANG_API.regenerate_api_key }}
+			</button>
+		</div>
+	</div>
+</div>

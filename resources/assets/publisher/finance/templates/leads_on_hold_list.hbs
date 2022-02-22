@@ -1,0 +1,92 @@
+<div class="hpanel panel-collapse">
+	<div class="panel-heading hbuilt">
+		<div class="panel-tools">
+			<a class="showhide" id="toggle_summary_panel"><i class="fa fa-chevron-down"></i></a>
+		</div>
+		<span class="panel-title">{{LANG_MESSAGES.summary_data}}</span>
+	</div>
+	<div class="panel-body" style="display: none">
+		<div class="row">
+			<div class="col-lg-6 col-md-8 col-sm-8 col-xs-10">
+				<div class="row m-b">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-2"></div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+						<span class="rubl fs18 va_middle">о</span>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+						<span class="fs18" style="vertical-align: -8px;">$</span>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+						<span class="fs18" style="vertical-align: -8px;">€</span>
+					</div>
+				</div>
+				<div class="row m-b">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-2">{{LANG_MESSAGES.conversions}}</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">{{total_rub}}</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">{{total_usd}}</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">{{total_eur}}</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-2 nowrap">{{LANG_FINANCE.total_hold_payout}}</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">{{toFixed total_rub_hold 2}}</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">{{toFixed total_usd_hold 2}}</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">{{toFixed total_eur_hold 2}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="table-responsive">
+	<table class="table table-hover table-striped table-bordered" id="leads_on_hold_table">
+		<thead>
+		<tr>
+			<th style="width: 50px;">{{ LANG_MESSAGES.action }}</th>
+			<th style="width: 100px;">{{ LANG_FINANCE.th_created }}</th>
+			<th>{{ LANG_FINANCE.th_approved }}</th>
+			<th>{{ LANG_MESSAGES.flow }}</th>
+			<th style="">{{ LANG_MESSAGES.offer }}</th>
+			<th style="">{{ LANG_FINANCE.hold_will_be_end }}</th>
+			<th style="">{{ LANG_MESSAGES.sum }}</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#leads}}
+			<tr>
+
+				<td>
+					<span data-toggle="tooltip" title="{{ ../LANG_MESSAGES.lead_hash_title }}">{{ hash }}</span>
+				</td>
+
+				<td>
+					<span data-sort="{{ created }}">{{ created }}</span>
+				</td>
+
+				<td>
+					<span data-sort="{{ processed }}">{{ processed }}</span>
+				</td>
+
+				<td>
+					<a class="" href="/tools/flows/{{ flow.hash }}?tab=flow" target="_blank">{{ flow.title }}</a>
+				</td>
+
+				<td>
+					<a class="" href="/offers/{{ offer.hash }}" target="_blank">{{ offer.title }}</a>
+				</td>
+
+				<td>
+					<span data-sort="{{ hold_date }}">{{ hold_date }}</span>
+				</td>
+
+				<td>
+					{{ payout }} {{{ currecy_sign }}}
+				</td>
+
+			</tr>
+		{{/leads}}
+		</tbody>
+	</table>
+</div>
+{{#unless leads}}
+	<h5 class="text-center m-t">{{ LANG_FINANCE.on_get_list_leads_on_hold_not_found }}</h5>
+{{/unless}}

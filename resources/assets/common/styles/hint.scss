@@ -1,0 +1,18 @@
+@import "../../../../node_modules/font-awesome/scss/font-awesome";
+
+.hint-inline .hint-block {
+  display: inline-block;
+}
+
+.hint {
+  vertical-align: middle;
+  color: #929294;
+
+  @extend .fa;
+  @extend .fa-info-circle;
+  @extend .pointer;
+}
+
+label > .hint {
+  display: inline;
+}

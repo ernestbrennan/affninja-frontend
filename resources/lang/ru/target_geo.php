@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'index_title' => 'Гео цели',
+    'create_header' => 'Добавление гео цели',
+    'edit_header' => 'Редактирование гео цели',
+    'clone_header' => 'Копирование гео цели',
+    'stakes_header' => 'Настройка выплат гео цели',
+    'on_delete_msg' => 'Удалить гео цель?',
+    'delete_msg' => 'Удалить гео цель',
+    'payout_profit_and_currency' => 'Выплата и валюта для TL0 группы пользователей',
+    'price_old_price_and_currency' => 'Цена, старая цена и валюта на лендинге',
+    'price_old_price' => 'Новая и старая цена на лендинге',
+    'show_rules' => 'Правила',
+    'rules_not_found' => 'В гео цели нет правил',
+    'default_target_geo_rule' => 'Правило гео цели по умолчанию',
+    'clone_rules' => 'Копировать правила',
+    'target_geo_rule_sort_type' => 'Тип сортировки правил',
+    'target_geo_rule_priority' => 'По приоритету',
+    'target_geo_rule_weight' => 'По весу',
+    'target_price' => 'Цена на лендинге',
+    'old_target_price' => 'Старая цена на лендинге',
+    'landing_payout' => 'Выплата',
+    'landing_profit' => 'Профит',
+    'id' => 'ID гео цели',
+    'add_user_group_stake' => 'Назначить выплату для группы',
+    'not_found' => 'Гео целей нет',
+];

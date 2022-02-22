@@ -1,0 +1,26 @@
+<table class="table table-hover table-striped table-bordered" id="{{table_identifier}}">
+    <thead>
+    <tr>
+        <th style="width: 110px;">{{ LANG_MESSAGES.date }}</th>
+        <th>{{ LANG_MESSAGES.type }}</th>
+        <th>{{ LANG_MESSAGES.hold }}</th>
+        <th>{{ LANG_MESSAGES.balance }}</th>
+        <th>{{ LANG_MESSAGES.comment }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#finance_operations}}
+        <tr>
+            <td>{{date}}</td>
+            <td>{{type_text}}</td>
+            <td><span title="{{hold_sum}}"></span>{{{getFinancePayout hold_sum}}} {{{currecy_sign}}}</td>
+            <td><span title="{{balance_sum}}"></span>{{{getFinancePayout balance_sum}}} {{{currecy_sign}}}</td>
+            <td>{{{description}}}</td>
+        </tr>
+    {{/finance_operations}}
+    </tbody>
+</table>
+
+{{#unless finance_operations}}
+    <h5 class="text-center m-t">{{ LANG_FINANCE.on_get_list_finance_operations_not_found }}</h5>
+{{/unless}}
